@@ -1,4 +1,7 @@
-﻿using System;
+﻿// LICENCE: This file is NOT to be used ANYWHERE! This cannot be shared, modified or used without my consent! Want to use it? Ask me on twitter: @initPRAGMA
+// Created with HUGE <3 by initPRAGMA.
+
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
