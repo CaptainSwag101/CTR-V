@@ -121,19 +121,19 @@
   <data name="Monitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NTRViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\NTRViewer.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SDL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\SDL2.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="turbojpeg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\turbojpeg.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NTRViewer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NTRViewer.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SDL2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SDL2.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turbojpeg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\turbojpeg.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
