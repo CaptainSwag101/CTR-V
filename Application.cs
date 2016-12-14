@@ -594,13 +594,13 @@ namespace CTR_V
         #region Update Settings
         private void TopScale_ValueChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default["TopScale"] = (int)TopScale.Value;
+            Properties.Settings.Default["TopScale"] = TopScale.Value;
             Properties.Settings.Default.Save();
         }
 
         private void BotScale_ValueChanged(object sender, EventArgs e)
         {
-            Properties.Settings.Default["BottomScale"] = (int)BotScale.Value;
+            Properties.Settings.Default["BottomScale"] = BotScale.Value;
             Properties.Settings.Default.Save();
         }
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CTRV));
             this.DisconnectTimeout = new System.Windows.Forms.Timer(this.components);
             this.AppTitle = new System.Windows.Forms.Label();
             this.TabFixer = new System.Windows.Forms.Panel();
@@ -556,6 +557,7 @@
             this.Controls.Add(this.customTabControl1);
             this.Controls.Add(this.AppTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(690, 317);
             this.MinimumSize = new System.Drawing.Size(690, 317);

@@ -5,11 +5,11 @@
     <Setting Name="IPAddress" Type="System.String" Scope="User">
       <Value Profile="(Default)">3DS IP Address</Value>
     </Setting>
-    <Setting Name="TopScale" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+    <Setting Name="TopScale" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1.0</Value>
     </Setting>
-    <Setting Name="BottomScale" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+    <Setting Name="BottomScale" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1.0</Value>
     </Setting>
     <Setting Name="ViewMode" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1</Value>

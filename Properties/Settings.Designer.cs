@@ -37,10 +37,10 @@ namespace CTR_V.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int TopScale {
+        [global::System.Configuration.DefaultSettingValueAttribute("1.0")]
+        public decimal TopScale {
             get {
-                return ((int)(this["TopScale"]));
+                return ((decimal)(this["TopScale"]));
             }
             set {
                 this["TopScale"] = value;
@@ -49,10 +49,10 @@ namespace CTR_V.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int BottomScale {
+        [global::System.Configuration.DefaultSettingValueAttribute("1.0")]
+        public decimal BottomScale {
             get {
-                return ((int)(this["BottomScale"]));
+                return ((decimal)(this["BottomScale"]));
             }
             set {
                 this["BottomScale"] = value;
