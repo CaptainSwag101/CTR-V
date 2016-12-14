@@ -21,10 +21,6 @@ namespace CTR_V
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CTRV());
-
 
             #region Check for an Update
 
