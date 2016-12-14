@@ -39,7 +39,11 @@
             this.logger = new System.Windows.Forms.RichTextBox();
             this.materialButton2 = new CTR_V.MaterialButton();
             this.materialButton1 = new CTR_V.MaterialButton();
-            this.Hidden1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.NetPass = new System.Windows.Forms.TextBox();
+            this.materialButton3 = new CTR_V.MaterialButton();
+            this.separator4 = new CTR_V.Separator();
+            this.NetSSID = new System.Windows.Forms.TextBox();
             this.Hidden2 = new System.Windows.Forms.TabPage();
             this.Hidden3 = new System.Windows.Forms.TabPage();
             this.Hidden4 = new System.Windows.Forms.TabPage();
@@ -68,6 +72,7 @@
             this.Quality = new System.Windows.Forms.NumericUpDown();
             this.customTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TopScale)).BeginInit();
@@ -116,7 +121,7 @@
             // 
             this.customTabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.customTabControl1.Controls.Add(this.tabPage1);
-            this.customTabControl1.Controls.Add(this.Hidden1);
+            this.customTabControl1.Controls.Add(this.tabPage2);
             this.customTabControl1.Controls.Add(this.Hidden2);
             this.customTabControl1.Controls.Add(this.Hidden3);
             this.customTabControl1.Controls.Add(this.Hidden4);
@@ -185,18 +190,65 @@
             this.materialButton1.UseVisualStyleBackColor = false;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // Hidden1
+            // tabPage2
             // 
-            this.Hidden1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.Hidden1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.Hidden1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Hidden1.Location = new System.Drawing.Point(38, 2);
-            this.Hidden1.Name = "Hidden1";
-            this.Hidden1.Padding = new System.Windows.Forms.Padding(3);
-            this.Hidden1.Size = new System.Drawing.Size(654, 291);
-            this.Hidden1.TabIndex = 1;
-            this.Hidden1.Tag = "Hidden";
-            this.Hidden1.Text = "tabPage2";
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.tabPage2.Controls.Add(this.NetPass);
+            this.tabPage2.Controls.Add(this.materialButton3);
+            this.tabPage2.Controls.Add(this.separator4);
+            this.tabPage2.Controls.Add(this.NetSSID);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage2.Location = new System.Drawing.Point(38, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(654, 291);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Tag = "";
+            this.tabPage2.Text = "tabPage2";
+            // 
+            // NetPass
+            // 
+            this.NetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.NetPass.Location = new System.Drawing.Point(6, 84);
+            this.NetPass.Name = "NetPass";
+            this.NetPass.Size = new System.Drawing.Size(642, 26);
+            this.NetPass.TabIndex = 24;
+            this.NetPass.Text = "Hosted Network Key (Password)";
+            this.NetPass.TextChanged += new System.EventHandler(this.NetPass_TextChanged);
+            // 
+            // materialButton3
+            // 
+            this.materialButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.materialButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton3.ForeColor = System.Drawing.Color.White;
+            this.materialButton3.Location = new System.Drawing.Point(2, 2);
+            this.materialButton3.Name = "materialButton3";
+            this.materialButton3.Size = new System.Drawing.Size(650, 34);
+            this.materialButton3.TabIndex = 22;
+            this.materialButton3.Text = "Restart HostedNetwork";
+            this.materialButton3.UseVisualStyleBackColor = false;
+            this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
+            // 
+            // separator4
+            // 
+            this.separator4.BackColor = System.Drawing.Color.Gainsboro;
+            this.separator4.Location = new System.Drawing.Point(6, 75);
+            this.separator4.Name = "separator4";
+            this.separator4.Size = new System.Drawing.Size(642, 2);
+            this.separator4.TabIndex = 20;
+            this.separator4.Text = "separator4";
+            // 
+            // NetSSID
+            // 
+            this.NetSSID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.NetSSID.Location = new System.Drawing.Point(6, 42);
+            this.NetSSID.Name = "NetSSID";
+            this.NetSSID.Size = new System.Drawing.Size(642, 26);
+            this.NetSSID.TabIndex = 19;
+            this.NetSSID.Text = "Hosted Network SSID (Name)";
+            this.NetSSID.TextChanged += new System.EventHandler(this.NetSSID_TextChanged);
             // 
             // Hidden2
             // 
@@ -571,6 +623,8 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormDrag);
             this.customTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -606,7 +660,7 @@
         public System.Windows.Forms.Label AppTitle;
         private CustomTabControl customTabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage Hidden1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel TabFixer;
         private System.Windows.Forms.TabPage Hidden2;
         private System.Windows.Forms.TabPage Hidden3;
@@ -622,6 +676,10 @@
         public System.Windows.Forms.Label label8;
         private Separator separator3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Separator separator4;
+        private System.Windows.Forms.TextBox NetSSID;
+        private MaterialButton materialButton3;
+        private System.Windows.Forms.TextBox NetPass;
     }
 }
 

@@ -190,5 +190,29 @@ namespace CTR_V.Properties {
                 this["DisabledColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("HostedNetwork SSID (Name)")]
+        public string NetSSID {
+            get {
+                return ((string)(this["NetSSID"]));
+            }
+            set {
+                this["NetSSID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("HostedNetwork Key (Password)")]
+        public string NetPass {
+            get {
+                return ((string)(this["NetPass"]));
+            }
+            set {
+                this["NetPass"] = value;
+            }
+        }
     }
 }

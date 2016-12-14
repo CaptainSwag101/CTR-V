@@ -39,56 +39,21 @@ static internal class Helpers
     #region GetTabIcon
     public static Image GetTabIcon(int i)
     {
-        if (CTR_V.Properties.Settings.Default.IconColor == Color.Black)
+        if (i == 0)
         {
-            if (i == 0)
-            {
-                return CTR_V.Properties.Resources.Monitor;
-            }
-            else if (i == 1)
-            {
-                return CTR_V.Properties.Resources.Monitor;
-            }
-            else if (i == 2)
-            {
-                return CTR_V.Properties.Resources.Monitor;
-            }
-            else
-            {
-                return CTR_V.Properties.Resources.Settings;
-            }
+            return CTR_V.Properties.Resources.Monitor;
         }
-        else
+        else if (i == 1)
         {
-            if (i == 0)
-            {
-                return CTR_V.Properties.Resources.Monitor;
-            }
-            else if (i == 1)
-            {
-                return CTR_V.Properties.Resources.Monitor;
-            }
-            else if (i == 2)
-            {
-                return CTR_V.Properties.Resources.Monitor;
-            }
-            else
-            {
-                return CTR_V.Properties.Resources.Settings;
-            }
+            return CTR_V.Properties.Resources.WiFi;
         }
-    }
-    #endregion
-    #region GetIconImage
-    public static Bitmap GetIconImage()
-    {
-        if (CTR_V.Properties.Settings.Default.IconColor == Color.Black)
+        else if (i == 2)
         {
             return CTR_V.Properties.Resources.Monitor;
         }
         else
         {
-            return CTR_V.Properties.Resources.Monitor;
+            return CTR_V.Properties.Resources.Settings;
         }
     }
     #endregion

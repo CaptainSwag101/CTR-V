@@ -44,5 +44,11 @@
     <Setting Name="DisabledColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">90, 90, 90</Value>
     </Setting>
+    <Setting Name="NetSSID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HostedNetwork SSID (Name)</Value>
+    </Setting>
+    <Setting Name="NetPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HostedNetwork Key (Password)</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

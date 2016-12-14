@@ -569,7 +569,11 @@ namespace CTR_V
             ScreenPriority.Value = Properties.Settings.Default.ScreenPriority;
             Quality.Value = Properties.Settings.Default.Quality;
 
+            NetSSID.Text = Properties.Settings.Default.NetSSID;
+            NetPass.Text = Properties.Settings.Default.NetPass;
+
             #endregion
+            RestartNetwork();
 
         }
 
@@ -587,6 +591,19 @@ namespace CTR_V
             File.Delete(Path.Combine(Path.GetTempPath(), "NTRViewer.exe"));
             File.Delete(Path.Combine(Path.GetTempPath(), "SDL2.dll"));
             File.Delete(Path.Combine(Path.GetTempPath(), "turbojpeg.dll"));
+            #endregion
+            #region Close HostedNetwork
+            Process cmd = new Process();
+            cmd.StartInfo.FileName = "cmd.exe";
+            cmd.StartInfo.RedirectStandardInput = true;
+            cmd.StartInfo.RedirectStandardOutput = true;
+            cmd.StartInfo.CreateNoWindow = true;
+            cmd.StartInfo.UseShellExecute = false;
+            cmd.Start();
+            cmd.StandardInput.WriteLine("netsh wlan stop hostednetwork");
+            cmd.StandardInput.Flush();
+            cmd.StandardInput.Close();
+            cmd.WaitForExit();
             #endregion
 
         }
@@ -639,6 +656,17 @@ namespace CTR_V
             Properties.Settings.Default["IPAddress"] = ipaddress.Text;
             Properties.Settings.Default.Save();
         }
+
+        private void NetSSID_TextChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default["NetSSID"] = NetSSID.Text;
+            Properties.Settings.Default.Save();
+        }
+        private void NetPass_TextChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default["NetPass"] = NetPass.Text;
+            Properties.Settings.Default.Save();
+        }
         #endregion
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -657,6 +685,32 @@ namespace CTR_V
         {
             Process.Start("https://twitter.com/initPRAGMA");
         }
+
+        private void RestartNetwork()
+        {
+            Process cmd = new Process();
+            cmd.StartInfo.FileName = "cmd.exe";
+            cmd.StartInfo.RedirectStandardInput = true;
+            cmd.StartInfo.RedirectStandardOutput = true;
+            cmd.StartInfo.CreateNoWindow = true;
+            cmd.StartInfo.UseShellExecute = false;
+            cmd.Start();
+            cmd.StandardInput.WriteLine("netsh wlan stop hostednetwork && netsh wlan set hostednetwork mode=allow ssid=" + NetSSID.Text + " key=" + NetPass.Text + " && netsh wlan start hostednetwork");
+            cmd.StandardInput.Flush();
+            cmd.StandardInput.Close();
+            cmd.WaitForExit();
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            if(NetPass.Text.Length < 8) {
+                MessageBox.Show("The Password '" + NetPass.Text + "' is less than 8 characters! Please correct it to continue.");
+            } else
+            {
+                RestartNetwork();
+            }
+        }
+
     }
 
 }
