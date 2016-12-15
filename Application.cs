@@ -575,6 +575,10 @@ namespace CTR_V
 
             #endregion
             RestartNetwork();
+            if(Properties.Settings.Default.AutoConnect == true) {
+                Connect(Properties.Settings.Default.IPAddress);
+                MemPatch = false;
+            }
 
         }
 
@@ -663,9 +667,23 @@ namespace CTR_V
             Properties.Settings.Default["NetSSID"] = NetSSID.Text;
             Properties.Settings.Default.Save();
         }
+
         private void NetPass_TextChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default["NetPass"] = NetPass.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        private void AutoConnect_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AutoConnect.CheckState == CheckState.Checked)
+            {
+                Properties.Settings.Default["AutoConnect"] = true;
+            }
+            else
+            {
+                Properties.Settings.Default["AutoConnect"] = false;
+            }
             Properties.Settings.Default.Save();
         }
         #endregion
@@ -731,6 +749,7 @@ namespace CTR_V
                 Properties.Settings.Default.Save();
             }
         }
+
     }
 
 }

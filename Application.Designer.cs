@@ -50,6 +50,7 @@
             this.Hidden5 = new System.Windows.Forms.TabPage();
             this.Hidden6 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.materialButton4 = new CTR_V.MaterialButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.separator3 = new CTR_V.Separator();
@@ -70,7 +71,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.PriorityFactor = new System.Windows.Forms.NumericUpDown();
             this.Quality = new System.Windows.Forms.NumericUpDown();
-            this.materialButton4 = new CTR_V.MaterialButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.AutoConnect = new System.Windows.Forms.CheckBox();
             this.customTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -319,10 +321,11 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.tabPage8.Controls.Add(this.AutoConnect);
+            this.tabPage8.Controls.Add(this.separator3);
             this.tabPage8.Controls.Add(this.materialButton4);
             this.tabPage8.Controls.Add(this.pictureBox1);
             this.tabPage8.Controls.Add(this.label8);
-            this.tabPage8.Controls.Add(this.separator3);
             this.tabPage8.Controls.Add(this.separator2);
             this.tabPage8.Controls.Add(this.separator1);
             this.tabPage8.Controls.Add(this.label1);
@@ -340,6 +343,7 @@
             this.tabPage8.Controls.Add(this.label6);
             this.tabPage8.Controls.Add(this.PriorityFactor);
             this.tabPage8.Controls.Add(this.Quality);
+            this.tabPage8.Controls.Add(this.label9);
             this.tabPage8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.tabPage8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tabPage8.Location = new System.Drawing.Point(38, 2);
@@ -350,11 +354,25 @@
             this.tabPage8.Tag = "";
             this.tabPage8.Text = "tabPage8";
             // 
+            // materialButton4
+            // 
+            this.materialButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.materialButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton4.ForeColor = System.Drawing.Color.White;
+            this.materialButton4.Location = new System.Drawing.Point(511, 3);
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.Size = new System.Drawing.Size(140, 34);
+            this.materialButton4.TabIndex = 24;
+            this.materialButton4.Text = "Link .bat";
+            this.materialButton4.UseVisualStyleBackColor = false;
+            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::CTR_V.Properties.Resources.Twitter;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(608, 241);
+            this.pictureBox1.Location = new System.Drawing.Point(618, 253);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.TabIndex = 23;
@@ -365,9 +383,9 @@
             // 
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(118)))), ((int)(((byte)(138)))));
-            this.label8.Location = new System.Drawing.Point(11, 227);
+            this.label8.Location = new System.Drawing.Point(8, 247);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(578, 61);
+            this.label8.Size = new System.Drawing.Size(578, 41);
             this.label8.TabIndex = 22;
             this.label8.Text = "Created by PRAGMA";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,7 +393,7 @@
             // separator3
             // 
             this.separator3.BackColor = System.Drawing.Color.Gainsboro;
-            this.separator3.Location = new System.Drawing.Point(6, 223);
+            this.separator3.Location = new System.Drawing.Point(6, 247);
             this.separator3.Name = "separator3";
             this.separator3.Size = new System.Drawing.Size(642, 2);
             this.separator3.TabIndex = 20;
@@ -384,7 +402,7 @@
             // separator2
             // 
             this.separator2.BackColor = System.Drawing.Color.Gainsboro;
-            this.separator2.Location = new System.Drawing.Point(6, 144);
+            this.separator2.Location = new System.Drawing.Point(6, 168);
             this.separator2.Name = "separator2";
             this.separator2.Size = new System.Drawing.Size(642, 2);
             this.separator2.TabIndex = 19;
@@ -403,7 +421,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 50);
+            this.label1.Location = new System.Drawing.Point(7, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 15);
             this.label1.TabIndex = 5;
@@ -411,7 +429,7 @@
             // 
             // TopScale
             // 
-            this.TopScale.Location = new System.Drawing.Point(598, 48);
+            this.TopScale.Location = new System.Drawing.Point(598, 72);
             this.TopScale.Maximum = new decimal(new int[] {
             4,
             0,
@@ -429,7 +447,7 @@
             // 
             // ViewMode
             // 
-            this.ViewMode.Location = new System.Drawing.Point(598, 95);
+            this.ViewMode.Location = new System.Drawing.Point(598, 119);
             this.ViewMode.Maximum = new decimal(new int[] {
             1,
             0,
@@ -457,7 +475,7 @@
             // 
             // ScreenPriority
             // 
-            this.ScreenPriority.Location = new System.Drawing.Point(598, 198);
+            this.ScreenPriority.Location = new System.Drawing.Point(598, 222);
             this.ScreenPriority.Maximum = new decimal(new int[] {
             1,
             0,
@@ -472,7 +490,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(7, 74);
+            this.label2.Location = new System.Drawing.Point(7, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 15);
             this.label2.TabIndex = 6;
@@ -482,7 +500,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(7, 121);
+            this.label7.Location = new System.Drawing.Point(7, 145);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 15);
             this.label7.TabIndex = 16;
@@ -492,7 +510,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(6, 152);
+            this.label4.Location = new System.Drawing.Point(6, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 15);
             this.label4.TabIndex = 10;
@@ -502,7 +520,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(7, 97);
+            this.label3.Location = new System.Drawing.Point(7, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(221, 15);
             this.label3.TabIndex = 7;
@@ -510,7 +528,7 @@
             // 
             // QOSValue
             // 
-            this.QOSValue.Location = new System.Drawing.Point(598, 174);
+            this.QOSValue.Location = new System.Drawing.Point(598, 198);
             this.QOSValue.Maximum = new decimal(new int[] {
             101,
             0,
@@ -528,7 +546,7 @@
             // 
             // BotScale
             // 
-            this.BotScale.Location = new System.Drawing.Point(598, 72);
+            this.BotScale.Location = new System.Drawing.Point(598, 96);
             this.BotScale.Maximum = new decimal(new int[] {
             4,
             0,
@@ -548,7 +566,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(6, 176);
+            this.label5.Location = new System.Drawing.Point(6, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 15);
             this.label5.TabIndex = 11;
@@ -558,7 +576,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(7, 200);
+            this.label6.Location = new System.Drawing.Point(7, 224);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(203, 15);
             this.label6.TabIndex = 12;
@@ -566,7 +584,7 @@
             // 
             // PriorityFactor
             // 
-            this.PriorityFactor.Location = new System.Drawing.Point(598, 150);
+            this.PriorityFactor.Location = new System.Drawing.Point(598, 174);
             this.PriorityFactor.Maximum = new decimal(new int[] {
             20,
             0,
@@ -584,7 +602,7 @@
             // 
             // Quality
             // 
-            this.Quality.Location = new System.Drawing.Point(598, 119);
+            this.Quality.Location = new System.Drawing.Point(598, 143);
             this.Quality.Minimum = new decimal(new int[] {
             1,
             0,
@@ -600,19 +618,25 @@
             0});
             this.Quality.ValueChanged += new System.EventHandler(this.Quality_ValueChanged);
             // 
-            // materialButton4
+            // label9
             // 
-            this.materialButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
-            this.materialButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton4.ForeColor = System.Drawing.Color.White;
-            this.materialButton4.Location = new System.Drawing.Point(511, 3);
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.Size = new System.Drawing.Size(140, 34);
-            this.materialButton4.TabIndex = 24;
-            this.materialButton4.Text = "Link .bat";
-            this.materialButton4.UseVisualStyleBackColor = false;
-            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(7, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 15);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Auto-Connect on Launch";
+            // 
+            // AutoConnect
+            // 
+            this.AutoConnect.AutoSize = true;
+            this.AutoConnect.Location = new System.Drawing.Point(633, 51);
+            this.AutoConnect.Name = "AutoConnect";
+            this.AutoConnect.Size = new System.Drawing.Size(15, 14);
+            this.AutoConnect.TabIndex = 27;
+            this.AutoConnect.UseVisualStyleBackColor = true;
+            this.AutoConnect.CheckedChanged += new System.EventHandler(this.AutoConnect_CheckedChanged);
             // 
             // CTRV
             // 
@@ -697,6 +721,8 @@
         private MaterialButton materialButton3;
         private System.Windows.Forms.TextBox NetPass;
         private MaterialButton materialButton4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox AutoConnect;
     }
 }
 
