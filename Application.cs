@@ -211,6 +211,7 @@ namespace CTR_V
                 packetRecvThread.Start();
                 log("[Connected!]");
                 StartViewer();
+                if (Properties.Settings.Default["BatchFile"].ToString() != "") { RunBatchFile(); }
             }
         }
 
@@ -701,6 +702,11 @@ namespace CTR_V
             cmd.WaitForExit();
         }
 
+        private void RunBatchFile()
+        {
+            Process.Start(Properties.Settings.Default.BatchFile);
+        }
+
         private void materialButton3_Click(object sender, EventArgs e)
         {
             if(NetPass.Text.Length < 8) {
@@ -711,6 +717,20 @@ namespace CTR_V
             }
         }
 
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dg = new OpenFileDialog();
+            dg.Title = "Open Text File";
+            dg.Filter = "Batch files|*.bat";
+            dg.Multiselect = false;
+            dg.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (dg.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show(dg.FileName);
+                Properties.Settings.Default["BatchFile"] = dg.FileName;
+                Properties.Settings.Default.Save();
+            }
+        }
     }
 
 }

@@ -214,5 +214,17 @@ namespace CTR_V.Properties {
                 this["NetPass"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BatchFile {
+            get {
+                return ((string)(this["BatchFile"]));
+            }
+            set {
+                this["BatchFile"] = value;
+            }
+        }
     }
 }

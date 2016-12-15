@@ -70,6 +70,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.PriorityFactor = new System.Windows.Forms.NumericUpDown();
             this.Quality = new System.Windows.Forms.NumericUpDown();
+            this.materialButton4 = new CTR_V.MaterialButton();
             this.customTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -318,6 +319,7 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.tabPage8.Controls.Add(this.materialButton4);
             this.tabPage8.Controls.Add(this.pictureBox1);
             this.tabPage8.Controls.Add(this.label8);
             this.tabPage8.Controls.Add(this.separator3);
@@ -448,7 +450,7 @@
             this.ipaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ipaddress.Location = new System.Drawing.Point(6, 6);
             this.ipaddress.Name = "ipaddress";
-            this.ipaddress.Size = new System.Drawing.Size(642, 26);
+            this.ipaddress.Size = new System.Drawing.Size(499, 26);
             this.ipaddress.TabIndex = 3;
             this.ipaddress.Text = "3DS IP Address";
             this.ipaddress.TextChanged += new System.EventHandler(this.ipaddress_TextChanged);
@@ -598,6 +600,20 @@
             0});
             this.Quality.ValueChanged += new System.EventHandler(this.Quality_ValueChanged);
             // 
+            // materialButton4
+            // 
+            this.materialButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.materialButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton4.ForeColor = System.Drawing.Color.White;
+            this.materialButton4.Location = new System.Drawing.Point(511, 3);
+            this.materialButton4.Name = "materialButton4";
+            this.materialButton4.Size = new System.Drawing.Size(140, 34);
+            this.materialButton4.TabIndex = 24;
+            this.materialButton4.Text = "Link .bat";
+            this.materialButton4.UseVisualStyleBackColor = false;
+            this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
+            // 
             // CTRV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,6 +696,7 @@
         private System.Windows.Forms.TextBox NetSSID;
         private MaterialButton materialButton3;
         private System.Windows.Forms.TextBox NetPass;
+        private MaterialButton materialButton4;
     }
 }
 

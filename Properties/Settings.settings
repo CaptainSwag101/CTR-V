@@ -50,5 +50,8 @@
     <Setting Name="NetPass" Type="System.String" Scope="User">
       <Value Profile="(Default)">HostedNetwork Key (Password)</Value>
     </Setting>
+    <Setting Name="BatchFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
